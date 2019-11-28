@@ -1,0 +1,8 @@
+{
+  "name": "fanka",
+  "short_name": "fanka",
+  "lang": "zh-CN",
+  "start_url": "/",
+  "display": "fullscreen",
+  "theme_color": "#2a2a2e"
+}
