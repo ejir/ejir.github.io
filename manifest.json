@@ -1,7 +1,0 @@
-{
-  "name": "饭卡",
-  "short_name": "fanka",
-  "lang": "zh-CN",
-  "start_url": "/",
-  "display": "standalone"
-}
