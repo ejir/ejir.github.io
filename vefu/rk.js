@@ -9,7 +9,7 @@ function dc()
  function  checkCookie(){
          k=localStorage.getItem("mk");
           if  (k==null){
-a=$.get("https://ejir.js.org/vefu/m.xml");
+a=$.get("https://ejir.js.org/vefu/m.html");
 a.done(function(){
 var  b=a.responseText;
 let m=document.getElementById("p1");
