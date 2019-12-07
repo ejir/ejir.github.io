@@ -1,8 +1,13 @@
 {
-  "name": "fanka",
+  "name": "Fan",
   "short_name": "fanka",
   "lang": "zh-CN",
   "start_url": "/",
   "display": "fullscreen",
-  "theme_color": "#2a2a2e"
+  "theme_color": "#0275d8",
+  "icons": [
+    {
+      "src": "https://code.aliyun.com/w.d/me/raw/master/ico.png"
+    }
+  ]
 }
