@@ -1,13 +1,23 @@
+
 {
-  "name": "Fan",
-  "short_name": "fanka",
-  "lang": "zh-CN",
-  "start_url": "/",
-  "display": "fullscreen",
-  "theme_color": "#0275d8",
+  "short_name": "fan",
+  "name": "FAN",
+  "description": "Weather forecast information",
   "icons": [
     {
-      "src": "https://code.aliyun.com/w.d/me/raw/master/ico.png"
+      "src": "https://code.aliyun.com/w.d/me/raw/master/ico.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://code.aliyun.com/w.d/me/raw/master/ico.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
-  ]
+  ],
+  "start_url": "/?source=IO",
+  "background_color": "#3367D6",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#3367D6"
 }
