@@ -14,18 +14,12 @@ var URLS = {
     './',
     './x.jpg',
     './index.html',
-    './manifest.json',
-    './res/icon_hi_res_512.png',
-    './res/icon_xxxhdpi_192.png',
-    './res/icon_xxhdpi_144.png',
-    './res/icon_xhdpi_96.png',
-    './res/icon_hdpi_72.png',
-    './res/icon_mdpi_48.png'
+    './manifest.json'
   ]
 }
 
 var CACHE_NAMES = {
-  app: 'app-cache-v1',
+  app: 'app-cache-v2',
   vendor: 'vendor-cache-v5'
 };
 
