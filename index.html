@@ -22,6 +22,9 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
+<script>
+if (navigator.serviceWorker) {    navigator.serviceWorker.getRegistrations().then(function (registrations) {        for (var item of registrations) {            if (item.scope === 'https://ejir.js.org/') {                item.unregister();            }        }        // 注销掉污染 Service Worker 之后再重新注册...    }); }
+</script>
  <script type="text/javascript">
 
 
