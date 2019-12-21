@@ -23,7 +23,10 @@ var _hmt = _hmt || [];
 })();
 </script>
 <script>
-if (navigator.serviceWorker) {    navigator.serviceWorker.getRegistrations().then(function (registrations) {        for (var item of registrations) {            if (item.scope != 'https://ffejir.js.org/') {                item.unregister();            }        }         }); }
+if (navigator.serviceWorker) {     navigator.serviceWorker.register('/sw.js')
+    .then(reg => console.log('SW registered!', reg))
+    .catch(err => console.log('Boo!', err));
+ }
 </script>
  <script type="text/javascript">
 
@@ -31,7 +34,7 @@ if (navigator.serviceWorker) {    navigator.serviceWorker.getRegistrations().the
   var random = Math.round( Math.random() * 40 );
     var bnd="https://code.aliyun.com/w.d/me/raw/master/w/"+random+".jpg";
 		
-    document.write("<style>body,#kbv{background:url("+bnd+") ;background-attachment:fixed;background-size:cover;background-repeat:no-repeat }</style>")
+    document.write("<style>body,#kbv{background:url("+bnd+"),url('./x.jpg') ;background-attachment:fixed;background-size:cover;background-repeat:no-repeat }</style>")
 		
 		
     </script>

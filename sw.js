@@ -1,10 +1,10 @@
 var cdn = {
-  unpkg: 'https://unpkg.com',
-  max: 'https://maxcdn.bootstrapcdn.com'
+  unpkg: 'https://cdn.jsdelivr.net',
+  max: 'https://code.aliyun.com'
 }
 
 var vendor = {
-  bootstrap: 'https://unpkg.com/bootstrap@4.0.0-alpha.2',
+  bootstrap: 'https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/',
   fontAwesome: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3',
   raven: 'https://unpkg.com/raven-js@3.7.0'
 };
@@ -12,7 +12,7 @@ var vendor = {
 var URLS = {
   app: [
     './',
-    './index.js',
+    './x.jpg',
     './index.html',
     './manifest.json',
     './res/icon_hi_res_512.png',
@@ -21,17 +21,11 @@ var URLS = {
     './res/icon_xhdpi_96.png',
     './res/icon_hdpi_72.png',
     './res/icon_mdpi_48.png'
-  ],
-  vendor: [
-    `${vendor.bootstrap}/dist/css/bootstrap.min.css`,
-    `${vendor.fontAwesome}/css/font-awesome.min.css`,
-    `${vendor.fontAwesome}/fonts/fontawesome-webfont.woff2`, // browsers that support sw support woff2
-    `${vendor.raven}/dist/raven.min.js`
   ]
 }
 
 var CACHE_NAMES = {
-  app: 'app-cache-v5',
+  app: 'app-cache-v1',
   vendor: 'vendor-cache-v5'
 };
 
@@ -94,8 +88,7 @@ function cleanupCache() {
 
 self.addEventListener('install', function(evt) {
   var cachingCompleted = Promise.all([
-    cacheAll(CACHE_NAMES.app, URLS.app),
-    cacheAll(CACHE_NAMES.vendor, URLS.vendor)
+    cacheAll(CACHE_NAMES.app, URLS.app)
   ]).then(() => self.skipWaiting())
 
   evt.waitUntil(cachingCompleted);
@@ -115,13 +108,9 @@ self.addEventListener('fetch', function(evt) {
   // only handle GET requests
   if (request.method !== 'GET') return;
 
-  if (isVendor(request.url)) {
-    // vendor requests: check cache first, fallback to fetch
-    response = lookupCache(request)
-      .catch(() => fetchThenCache(request, CACHE_NAMES.vendor));
-  } else {
+
     // app request: race cache/fetch (bonus: update in background)
     response = raceRequest(request, CACHE_NAMES.app);
-  }
+  
   evt.respondWith(response);
 });
