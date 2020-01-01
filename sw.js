@@ -19,7 +19,7 @@ var URLS = {
 }
 
 var CACHE_NAMES = {
-  app: 'app-cache-v2',
+  app: 'app-cache-v3',
   vendor: 'vendor-cache-v5'
 };
 
