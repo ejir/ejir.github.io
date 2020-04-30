@@ -91,7 +91,8 @@ canvas#live2d.live2d{
 </style>
 <script>function  nm(){document.getElementById("mulu").style.display="block";setTimeout(function(){document.getElementById("mulu").style.display="none"},2000)}
 document.getElementById("btc").addEventListener("click",nm)
-	function rml(){  document.getElementById("btc").removeEventListener("click",nm)}
+	function rml(){  document.getElementById("btc").removeEventListener("click",nm);
+		      document.getElementById("btc").addEventListener("dbclick",boos);}
 	document.getElementById("live2d").addEventListener("click",rml);//first
 	function  boos(){ k=localStorage.getItem("mkl");
           if (k!=null){
@@ -105,7 +106,7 @@ let m=document.getElementById("p1");
                  })  }
                       }
 	
-	document.getElementById("btc").addEventListener("dbclick",boos);
+	
 	
 </script>
  
