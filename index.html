@@ -143,7 +143,23 @@ bottom:3%;right:1%;z-index:10000;
 	$.get("https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css");
 	$.get("https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js");
 	$.get("https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js");
-	$.get("https://code.aliyun.com/w.d/me/raw/master/14.png");
+	function  nm(){document.getElementById("mulu").style.display="block";setTimeout(function(){document.getElementById("mulu").style.display="none"},2000)}
+document.getElementById("btc").addEventListener("click",nm)
+	function rml(){  document.getElementById("btc").removeEventListener("click",nm);
+		      document.getElementById("btc").addEventListener("dbclick",boos);}
+	document.getElementById("live2d").addEventListener("click",rml);//first
+	function  boos(){ k=localStorage.getItem("mkl");
+          if (k!=null){
+a=$.get("https://cdn.jsdelivr.net/gh/rs-v/akou@1.0.6/m.html");
+a.done(function(){
+var  b=a.responseText;
+let m=document.getElementById("p1");
+ m.innerHTML=b;
+ window.localStorage.setItem("mkl",b);
+ 
+                 })  }
+                      }
+	
 </script>
 
 </body>
