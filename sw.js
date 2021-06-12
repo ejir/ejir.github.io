@@ -19,8 +19,8 @@ var URLS = {
 }
 
 var CACHE_NAMES = {
-  app: 'app-cache-v6',
-  vendor: 'vendor-cache-v6'
+  app: 'app-cache-v7',
+  vendor: 'vendor-cache-v7'
 };
 
 function isVendor(url) {
